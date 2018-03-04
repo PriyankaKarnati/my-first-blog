@@ -8,15 +8,14 @@
         </div>
 
         <div>
-            <p>published: 04.03.2018, 15:16</p>
-            <h2><a href="">My first post</a></h2>
-            <p>It is great to see you all!! Dragon's bless you!!</p>
-        </div>
-
-        <div>
-            <p>published: 04.03.2018, 15:24</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Hi there!I see you still reading,why dont buy a dragon toy for her ;)</p>
+            {% for post in posts%}
+            <div>
+                <p>Published : {{post.published_date}}</p>
+                <h1><a href =""> {{post.title}}</a></h1>
+                <p> {{post.text|linebreaksbr}}
+            </div>
+            {%endfor%}
+            
         </div>
     </body>
 </html>
